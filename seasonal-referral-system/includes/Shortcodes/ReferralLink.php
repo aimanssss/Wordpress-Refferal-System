@@ -6,6 +6,7 @@ use Seasonal\ReferralSystem\AffiliateManager;
 class ReferralLink {
     public static function register(): void {
         add_shortcode( 'srs_referral_link', [ __CLASS__, 'render' ] );
+        add_shortcode( 'referral_link', [ __CLASS__, 'render' ] ); // Legacy alias
     }
 
     public static function render(): string {
